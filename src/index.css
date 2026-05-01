@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 30 15% 92%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 30 10% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 43 74% 49%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 30 15% 88%;
+    --input: 30 15% 88%;
+    --ring: 0 0% 8%;
+
+    --radius: 0px;
+
+    /* Custom luxury tokens */
+    --gold: 43 74% 49%;
+    --gold-light: 43 60% 65%;
+    --cream: 40 30% 96%;
+    --charcoal: 0 0% 12%;
+    --charcoal-light: 0 0% 20%;
+    --warm-gray: 30 5% 45%;
+
+    /* Typography */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Spacing */
+    --header-height: 60px;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 30 15% 92%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 30 15% 88%;
+    --sidebar-ring: 0 0% 8%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 43 74% 49%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 80%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 95%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgb(151, 33, 3);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+
+  .luxury-heading {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .luxury-subheading {
+    font-family: var(--font-body);
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Ant Design Overrides */
+.ant-carousel {
+  height: calc(100vh - var(--header-height));
+}
+
+.ant-carousel .slick-slide {
+  height: calc(100vh - var(--header-height));
+}
+
+.ant-carousel .slick-slide > div {
+  height: 100%;
+}
+
+.ant-carousel .slick-dots {
+  bottom: 40px !important;
+}
+
+.ant-carousel .slick-dots li {
+  width: 40px !important;
+}
+
+.ant-carousel .slick-dots li button {
+  height: 2px !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  border-radius: 0 !important;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: rgba(255, 255, 255, 1) !important;
+}
+
+.ant-drawer .ant-drawer-body {
+  padding: 0;
+}
+
+.ant-drawer .ant-drawer-header {
+  border-bottom: none;
+  padding: 24px 32px;
+}
+
+.ant-badge .ant-badge-count {
+  background-color: hsl(var(--charcoal));
+  box-shadow: none;
+  font-family: var(--font-body);
+  font-size: 10px;
+  min-width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
+
+/* Product Collapse Overrides */
+.product-collapse.ant-collapse {
+  background: transparent;
+  border: none;
+}
+
+.product-collapse .ant-collapse-item {
+  border-bottom: 1px solid hsl(var(--border)) !important;
+}
+
+.product-collapse .ant-collapse-header {
+  padding: 16px 0 !important;
+  font-family: var(--font-body);
+}
+
+.product-collapse .ant-collapse-content {
+  border-top: none !important;
+}
+
+.product-collapse .ant-collapse-content-box {
+  padding: 0 0 16px 0 !important;
+}
