@@ -13,7 +13,7 @@ import product3 from '@/assets/blur/3.png';
 import product4 from '@/assets/blur/4.png';
 import product5 from '@/assets/blur/5.png';
 import product6 from '@/assets/blur/6.png';
-
+import product7 from '@/assets/blur/7.png';
 // Mock product data - in a real app this would come from an API
 
 const allProducts = {
@@ -64,7 +64,16 @@ const allProducts = {
     images: [product2],
     isNew: false,
     description: 'Брюки клёш',
-}}
+},
+  '7': {
+    id: '7',
+    name: 'Лонгслив с шелком',
+    price: '7000',
+    images: [product7],
+    isNew: false,
+    description: 'Лонгслив с шелком',
+  }
+}
 
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();

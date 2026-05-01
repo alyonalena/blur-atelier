@@ -5,6 +5,7 @@ import product3 from '@/assets/blur/3.png';
 import product4 from '@/assets/blur/4.png';
 import product5 from '@/assets/blur/5.png';
 import product6 from '@/assets/blur/6.png';
+import product7 from '@/assets/blur/7.png';
 
 const products = [
   {
@@ -12,6 +13,13 @@ const products = [
     name: 'Кожаный корсет',
     price: '15000',
     image: product6,
+    isNew: false,
+  },
+  {
+    id: '7',
+    name: 'Лонгслив с шелком',
+    price: '7000',
+    image: product7,
     isNew: false,
   },
   {

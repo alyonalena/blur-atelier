@@ -13,6 +13,7 @@ import product3 from '@/assets/blur/3.png';
 import product4 from '@/assets/blur/4.png';
 import product5 from '@/assets/blur/5.png';
 import product6 from '@/assets/blur/6.png';
+import product7 from '@/assets/blur/7.png';
 
 const productData: Record<string, { name: string; price: number; image: string }> = {
     '6': {
@@ -44,7 +45,12 @@ const productData: Record<string, { name: string; price: number; image: string }
       name: 'Брюки клёш',
       price: 15000,
       image: product2,
-  }
+  },
+  '7': {
+    name: 'Лонгслив с шелком',
+    price: 7000,
+    image: product7,
+  },
 };
 
 const Index = () => {
