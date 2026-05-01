@@ -72,7 +72,7 @@ const ProductGrid = ({ onAddToCart }: ProductGridProps) => {
           Каталог
         </h2>
         <p className="font-body text-xs tracking-[0.3em] text-muted-foreground mb-3">
-          Данные модели доступны к заказу по вашим размерам
+          Данные модели доступны к заказу по вашим меркам
         </p>
       </div>
 
