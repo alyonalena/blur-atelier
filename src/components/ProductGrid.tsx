@@ -9,17 +9,17 @@ import product7 from '@/assets/blur/7.png';
 
 const products = [
   {
-    id: '6',
-    name: 'Кожаный корсет',
-    price: '15000',
-    image: product6,
-    isNew: false,
-  },
-  {
     id: '7',
     name: 'Лонгслив с шелком',
     price: '7000',
     image: product7,
+    isNew: false,
+  },
+  {
+    id: '6',
+    name: 'Кожаный корсет',
+    price: '15000',
+    image: product6,
     isNew: false,
   },
   {
