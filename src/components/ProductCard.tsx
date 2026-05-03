@@ -27,7 +27,7 @@ const ProductCard = ({ id, name, price, image, hoverImage, isNew, onAddToCart }:
       onClick={handleClick}
     >
       {/* Image Container - Light gray background like nikiheels */}
-      <div className="relative aspect-square overflow-hidden bg-[#f5f5f5] mb-2">
+      <div className="relative overflow-hidden bg-[#f5f5f5] mb-2">
         <img 
           src={isHovered && hoverImage ? hoverImage : image}
           alt={name}

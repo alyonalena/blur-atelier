@@ -72,12 +72,12 @@ const ProductGrid = ({ onAddToCart }: ProductGridProps) => {
           Каталог
         </h2>
         <p className="font-body text-xs tracking-[0.3em] text-muted-foreground mb-3">
-          Данные модели доступны к заказу по вашим меркам
+          Данные модели доступны к заказу
         </p>
       </div>
 
       {/* Products Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {products.map((product, index) => (
           <div 
             key={product.id}
