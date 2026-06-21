@@ -43,7 +43,7 @@ const HeroCarousel = () => {
             objectFit: 'cover' /* Заполняет весь блок без искажения пропорций */
           }}
         >
-          <source src='/src/assets/blur/vid.mp4' type="video/mp4" />
+          <source src='/vid.mp4' type="video/mp4" />
         </video>
       </div>
       {/* <Carousel 
