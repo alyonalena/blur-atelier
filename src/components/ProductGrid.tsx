@@ -1,11 +1,11 @@
 import ProductCard from './ProductCard';
-import product1 from '@/assets/blur/1.png';
-import product2 from '@/assets/blur/2.png';
-import product3 from '@/assets/blur/3.png';
-import product4 from '@/assets/blur/4.png';
-import product5 from '@/assets/blur/5.png';
-import product6 from '@/assets/blur/6.png';
-import product7 from '@/assets/blur/7.png';
+import product1 from '@/assets/blur/1.png'
+import product2 from '@/assets/blur/2.png'
+import product3 from '@/assets/blur/3.png'
+import product4 from '@/assets/blur/4.png'
+import product5 from '@/assets/blur/5.png'
+import product6 from '@/assets/blur/6.png'
+import product7 from '@/assets/blur/7.png'
 
 const products = [
   {
@@ -67,8 +67,8 @@ const ProductGrid = ({ onAddToCart }: ProductGridProps) => {
   return (
     <section className="py-20 px-6 md:px-12 lg:px-20 bg-background">
       {/* Section Header */}
-      <div className="text-center mb-16">
-        <h2 className="font-display text-3xl md:text-4xl tracking-[0.15em]">
+      <div className="text-right mb-16">
+        <h2 className="text-3xl md:text-4xl tracking-[0.15em]">
           Каталог
         </h2>
         <p className="font-body text-xs tracking-[0.3em] text-muted-foreground mb-3">

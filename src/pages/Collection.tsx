@@ -53,7 +53,7 @@ const productData: Record<string, { name: string; price: number; image: string }
     },
 };
 
-const Index = () => {
+const Collection = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
@@ -99,8 +99,8 @@ const Index = () => {
         onSearchClick={() => message.info('Search coming soon')}
       />
       
-      <main>
-        <HeroCarousel />
+      <main>        
+        <ProductGrid onAddToCart={handleAddToCart} />
       </main>
 
       <Footer />
@@ -116,4 +116,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Collection

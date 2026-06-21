@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Badge, Drawer } from 'antd'
 import { MenuOutlined, SearchOutlined, ShoppingOutlined, CloseOutlined } from '@ant-design/icons'
+import icon from '@/assets/blur/favicon.png' 
+
 
 interface HeaderProps {
   cartCount?: number;
@@ -12,50 +14,46 @@ const Header = ({ cartCount = 0, onCartClick, onSearchClick }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: 'Новая коллекция', href: '#new' },
-    { label: 'Каталог', href: '#collections' },
-    { label: 'О бренде', href: '#about' },
+    { label: 'Каталог', href: 'collection' },
+    { label: 'Услуги ателье', href: 'new' },
+    { label: 'О нас', href: 'about' },
   ]
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 h-header bg-charcoal">
-        <div className="flex items-center justify-between h-full px-6 md:px-12">
-          {/* Menu Button */}
-          <button 
-            onClick={() => setMenuOpen(true)}
-            className="text-primary-foreground hover:opacity-70 transition-opacity"
-            aria-label="Open menu"
-          >
-            <MenuOutlined className="text-lg" />
-          </button>
-
+      <header className="fixed top-0 left-0 right-0 z-50 h-header bg-none">
+        <div className="flex items-top justify-between h-full px-6 ">     {/* Menu Button */}
+          
           {/* Logo */}
-          <div className="absolute left-1/2 -translate-x-1/2">
-            <a href="/" className="block">
-              <h3 className="text-center font-display text-primary-foreground text-xl md:text-2xl tracking-[0.3em] font-normal">
-                BLUR 
-              </h3>
-              <p className="text-center text-primary-foreground/60 text-[8px] tracking-[0.25em] uppercase font-body">
-                Atelier
-              </p>
-              <p className="text-center text-primary-foreground/60 text-[6px] tracking-[0.25em] font-body">
-                Санкт-Петербург
-              </p>
+          <div className="margin-top-20">
+            <a href="/" className="">
+              <img 
+                src={icon}       
+                width={75}
+                height={120}
+                />
             </a>
-          </div>
 
-          {/* Right Icons */}
+          </div>
+                    {/* Right Icons */}
           <div className="flex items-center gap-5">
-            <button 
+          <button 
               onClick={onCartClick}
               className="text-primary-foreground hover:opacity-70 transition-opacity"
               aria-label="Cart"
             >
               <Badge count={cartCount} size="small">
-                <ShoppingOutlined className="text-lg text-primary-foreground" />
+                <ShoppingOutlined className="text-lg text-primary-foreground" style={{ color: 'black'}}/>
               </Badge>
             </button>
+            <button 
+              onClick={() => setMenuOpen(true)}
+              className="text-primary-foreground hover:opacity-70 transition-opacity"
+              aria-label="Open menu"
+            >
+              <MenuOutlined className="text-lg" style={{ color: 'black'}} />
+            </button>
+
           </div>
         </div>
       </header>
@@ -72,7 +70,7 @@ const Header = ({ cartCount = 0, onCartClick, onSearchClick }: HeaderProps) => {
           header: { display: 'none' },
         }}
       >
-        <div className="h-full bg-charcoal text-primary-foreground">
+        <div className="h-full bg-black opacity-70 text-primary-foreground">
           {/* Close Button */}
           <div className="flex justify-end p-6">
             <button 
