@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { message } from 'antd';
 import Header from '@/components/Header';
 import HeroCarousel from '@/components/HeroCarousel';
-import ProductGrid from '@/components/ProductGrid';
-import CategorySection from '@/components/CategorySection';
 import Footer from '@/components/Footer';
 import CartDrawer, { CartItem } from '@/components/CartDrawer';
 
