@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 interface ProductCardProps {
   id: string;
@@ -12,12 +12,12 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, price, image, hoverImage, isNew, onAddToCart }: ProductCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false)
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate(`/product/${id}`);
-  };
+    navigate(`/product/${id}`)
+  }
 
   return (
     <div 
@@ -67,7 +67,7 @@ const ProductCard = ({ id, name, price, image, hoverImage, isNew, onAddToCart }:
         </p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard

@@ -15,7 +15,7 @@ const Header = ({ cartCount = 0, onCartClick, onSearchClick }: HeaderProps) => {
 
   const menuItems = [
     { label: 'Каталог', href: 'collection' },
-    { label: 'Услуги ателье', href: 'new' },
+    { label: 'Услуги ателье', href: 'atelier' },
     { label: 'О нас', href: 'about' },
   ]
 
