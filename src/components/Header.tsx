@@ -89,7 +89,10 @@ const Header = ({ cartCount = 0, onCartClick, onSearchClick }: HeaderProps) => {
                 <li key={item.label} className="animate-fade-up" style={{ animationDelay: `${index * 0.05}s` }}>
                   <a 
                     href={item.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => {
+                      window.location.href = item.href
+                      setMenuOpen(false)
+                    }}
                     className="block font-display text-2xl tracking-[0.15em] hover:text-gold transition-colors"
                   >
                     {item.label}
